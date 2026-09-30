@@ -1,0 +1,57 @@
+Task 23 – SQL Window Functions Notes
+
+Query 1 – ROW_NUMBER
+
+Numbers each customer's orders in chronological order. The numbering starts again for each customer.
+
+Query 2 – ROW_NUMBER
+
+Numbers the individual items within each order.
+
+Query 3 – RANK
+
+Ranks orders according to their freight charges, from highest to lowest.
+
+Query 4 – RANK vs DENSE_RANK
+
+Compares `RANK` and `DENSE_RANK`. Both assign the same rank to tied values, but `RANK` leaves gaps after ties while `DENSE_RANK` does not.
+
+Query 5 – RANK
+
+Ranks orders according to their total order value, with the highest-value order receiving the highest ranking position.
+
+Query 6 – DENSE_RANK
+
+Ranks orders by total order value using `DENSE_RANK`, which does not leave gaps between ranking positions after ties.
+
+Query 7 – LAG
+
+Uses `LAG` to display the previous order date for each customer.
+
+Query 8 – LAG
+
+Uses the previous order date to calculate how many days passed between consecutive customer orders.
+
+Query 9 – LAG
+
+Compares the freight charge of an order with the freight charge of the customer's previous order.
+
+Query 10 – LAG
+
+Compares each month's total sales with the previous month's sales to identify changes over time.
+
+Query 11 – ROW_NUMBER
+
+Numbers each customer's orders according to order value, helping identify the highest-value orders for each customer.
+
+Query 12 – RANK
+
+Ranks customers according to their total sales value.
+
+Overall Notes
+
+`ROW_NUMBER` is useful when every row needs a unique sequence number.
+`RANK` is useful when tied values should receive the same rank and gaps are acceptable.
+`DENSE_RANK` is useful when tied values should receive the same rank without gaps.
+`LAG` is useful for comparing a current value with a previous value, such as a previous order or previous month's sales.
+Window functions allow analysis across related rows while keeping the individual rows visible.
